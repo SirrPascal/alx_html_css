@@ -36,3 +36,13 @@ header, footer {
 header, footer {
     width: 100%;
 }
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Stack article and aside vertically */
+    }
+
+    article, aside {
+        flex: auto; /* Take full width */
+    }
+}
