@@ -57,7 +57,6 @@ p {
     margin: 0;
 }
 
-/* Container Logic */
 header>nav,
 main>section>div,
 footer>section {
@@ -110,7 +109,6 @@ header nav ul li a:hover {
    4. HERO SECTION (1st Section)
    ========================================= */
 main section:nth-child(1) {
-    /* Fix: Use correct path and put gradient ON TOP (first) */
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('CSS Advanced/images/Object.png');
     background-size: cover;
     background-position: center;
@@ -129,7 +127,6 @@ main section:nth-child(1) h1 {
     line-height: 1.1;
 }
 
-/* SMILES GRIN LAUGH */
 main section:nth-child(1)>div:first-of-type span {
     display: inline-block;
     margin: 0 15px;
@@ -139,7 +136,6 @@ main section:nth-child(1)>div:first-of-type span {
     text-transform: uppercase;
 }
 
-/* Register Button */
 button {
     background-color: var(--color-primary);
     color: var(--color-white);
@@ -162,7 +158,6 @@ button:hover {
     background-color: #b050ff;
 }
 
-/* "Learn from the pros" */
 main section:nth-child(1) h2 {
     font-size: 32px;
     margin-top: 100px;
@@ -170,10 +165,6 @@ main section:nth-child(1) h2 {
     font-weight: 300;
 }
 
-/* If HTML allows, we would color 'Learn' purple here, but HTML structure is flat h2 */
-/* main section:nth-child(1) h2 span { color: var(--color-primary); } */
-
-/* Pros Grid */
 main section:nth-child(1)>div:nth-child(2)>div {
     display: flex;
     flex-wrap: wrap;
@@ -209,87 +200,60 @@ main section:nth-child(1)>div:nth-child(2) p {
 /* =========================================
    5. QUOTE / TESTIMONIAL SECTION
    ========================================= */
-
-/* 1. Main Container */
 main section:nth-child(2) {
     background-color: #C271FF;
-    /* Smile School Purple */
     color: white;
-    /* White text */
     padding: 80px 0;
-    /* Vertical spacing */
     font-family: 'Source Sans Pro', sans-serif;
-
-    /* Layout: Flexbox to center and align Image + Text */
     display: flex;
     justify-content: center;
-    /* Centers content horizontally */
     align-items: center;
-    /* Vertically centers image with text */
     gap: 60px;
-    /* Space between image and text */
 }
 
-/* 2. Profile Image Container (First Div) */
 main section:nth-child(2)>div:first-child {
     flex-shrink: 0;
-    /* Prevents image from shrinking if screen gets small */
-    /* Override global width */
     width: auto;
     margin: 0;
 }
 
-/* 3. The Profile Image */
 main section:nth-child(2) img {
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    /* Makes the image a perfect circle */
     object-fit: cover;
-    /* Ensures image fills the circle without stretching */
 }
 
-/* 4. Text Container (Second Div) */
 main section:nth-child(2)>div:last-child {
     max-width: 650px;
-    /* Limits width so text doesn't stretch too far */
     width: auto;
     margin: 0;
 }
 
-/* 5. The Quote Text */
 main section:nth-child(2) blockquote {
     font-size: 22px;
     font-weight: 400;
-    /* Regular weight */
     line-height: 1.5;
     margin: 0 0 20px 0;
-    /* Resets default margin and adds bottom space */
 }
 
-/* 6. Name */
 main section:nth-child(2) h3 {
     font-size: 18px;
     font-weight: 700;
     margin: 0 0 5px 0;
     text-transform: uppercase;
-    /* Assuming the design uses uppercase for NAME */
 }
 
-/* 7. Profession / Title */
 main section:nth-child(2) p {
     font-size: 16px;
     font-weight: 400;
     font-style: italic;
-    /* Matches the "weather presenter" style */
     margin: 0;
 }
 
-/* OPTIONAL: Mobile Responsiveness */
 @media (max-width: 768px) {
     main section:nth-child(2) {
         flex-direction: column;
-        /* Stack image on top of text */
         text-align: center;
         padding: 50px 20px;
     }
@@ -298,30 +262,20 @@ main section:nth-child(2) p {
 /* =========================================
    6. MOST POPULAR TUTORIALS SECTION (FIXED)
    ========================================= */
-
-/* 1. Main Section Container */
 main section:nth-child(3) {
     background-color: #F7F7F7;
     font-family: 'Source Sans Pro', sans-serif;
     padding: 80px 0;
-
-    /* --- GRID LAYOUT FIX --- */
     display: grid;
-    /* This creates exactly 4 columns, each 255px wide */
     grid-template-columns: repeat(4, 255px);
-    /* Centers the whole grid on the screen */
     justify-content: center;
-    /* Spacing between columns and rows */
     gap: 30px;
-
     width: 100%;
     margin: 0 auto;
     color: #071629;
 }
 
-/* 2. Section Heading */
 main section:nth-child(3) h2 {
-    /* Forces the title to span across all 4 columns */
     grid-column: 1 / -1;
     text-align: center;
     font-size: 32px;
@@ -330,16 +284,12 @@ main section:nth-child(3) h2 {
     margin-bottom: 50px;
 }
 
-/* 3. The Card Container (The 4 divs) */
 main section:nth-child(3)>div {
     background: white;
-    /* No width needed here, the grid controls the 255px width */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: left;
-
-    /* Position Relative is for the absolute stars/time at the bottom */
     position: relative;
     padding-bottom: 60px;
     transition: transform 0.3s;
@@ -349,14 +299,12 @@ main section:nth-child(3)>div:hover {
     transform: translateY(-5px);
 }
 
-/* 4. Card Content Styling */
 main section:nth-child(3)>div>img {
     width: 100%;
     height: 160px;
     object-fit: cover;
 }
 
-/* IMAGE FIXES (Re-inserted) */
 main section:nth-child(3)>div:nth-of-type(1)>img {
     content: url('CSS Advanced/images/7.png');
 }
@@ -373,7 +321,6 @@ main section:nth-child(3)>div:nth-of-type(4)>img {
     content: url('CSS Advanced/images/6.png');
 }
 
-/* Play Overlay (Re-inserted) */
 main section:nth-child(3)>div::before {
     content: '';
     position: absolute;
@@ -404,7 +351,6 @@ main section:nth-child(3)>div>p:first-of-type {
     margin: 0 20px 20px;
 }
 
-/* 5. Author Block */
 main section:nth-child(3)>div>div:first-of-type {
     display: flex;
     align-items: center;
@@ -413,7 +359,6 @@ main section:nth-child(3)>div>div:first-of-type {
 
 main section:nth-child(3)>div>div:first-of-type img {
     content: url('CSS Advanced/images/1.png');
-    /* Re-inserted fix */
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -426,7 +371,6 @@ main section:nth-child(3)>div h4 {
     margin: 0;
 }
 
-/* 6. Card Footer (Stars & Time) */
 main section:nth-child(3)>div>div:last-of-type {
     display: flex;
     gap: 2px;
@@ -452,45 +396,33 @@ main section:nth-child(3)>div>p:last-child {
     padding: 0;
 }
 
-/* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 1150px) {
     main section:nth-child(3) {
         grid-template-columns: repeat(2, 255px);
-        /* 2 columns on tablet */
     }
 }
 
 @media (max-width: 600px) {
     main section:nth-child(3) {
         grid-template-columns: repeat(1, 255px);
-        /* 1 column on phone */
     }
 }
 
 /* =========================================
    7. FREE MEMBERSHIP SECTION
    ========================================= */
-
 main section:nth-child(4) {
     background-color: #071629;
-    /* Dark Navy Background */
     color: white;
     padding: 100px 0;
-
-    /* --- GRID LAYOUT ENGINE --- */
     display: grid;
-    /* Create 4 columns, sized to fit their content */
     grid-template-columns: repeat(4, 250px);
-    /* Center the grid in the middle of the screen */
     justify-content: center;
-    /* Space between the items */
     gap: 30px;
     align-items: start;
 }
 
-/* --- 1. TITLE (Spans across top) --- */
 main section:nth-child(4) h2 {
-    /* Tell the title to span from column line 1 to the end (-1) */
     grid-column: 1 / -1;
     text-align: center;
     font-size: 32px;
@@ -498,14 +430,8 @@ main section:nth-child(4) h2 {
     margin-bottom: 50px;
 }
 
-/* If you want the purple "Free" text, uncomment this:
-main section:nth-child(4) h2 span { color: #C271FF; font-weight: 700; } */
-
-
-/* --- 2. THE 4 COLUMNS (The Grid Items) --- */
 main section:nth-child(4)>div {
     text-align: center;
-    /* No width needed here, the grid controls it */
 }
 
 main section:nth-child(4)>div img {
@@ -526,14 +452,9 @@ main section:nth-child(4)>div p {
     opacity: 0.8;
 }
 
-
-/* --- 3. BUTTON (Spans across bottom) --- */
 main section:nth-child(4) button {
-    /* Tell the button to span all columns like the title */
     grid-column: 1 / -1;
-    /* Center the button itself within that span */
     justify-self: center;
-
     background-color: #C271FF;
     color: white;
     border: none;
