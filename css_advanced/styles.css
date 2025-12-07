@@ -1,0 +1,641 @@
+/* =========================================
+   1. VARIABLES & FONTS
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+:root {
+    --color-primary: #C271FF;
+    --color-dark: #071629;
+    --color-white: #FFFFFF;
+    --color-bg-light: #F7F7F7;
+    --font-base: 'Source Sans Pro', sans-serif;
+    --font-display: 'Coiny', cursive;
+}
+
+/* =========================================
+   2. GLOBAL RESET & UTILITIES
+   ========================================= */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-base);
+    color: var(--color-white);
+    background-color: var(--color-white);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+/* Container Logic */
+header>nav,
+main>section>div,
+footer>section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   3. HEADER
+   ========================================= */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 30px;
+    z-index: 10;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav img {
+    width: 160px;
+    height: auto;
+}
+
+header nav ul {
+    display: flex;
+    gap: 40px;
+}
+
+header nav ul li a {
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header nav ul li a:hover {
+    color: var(--color-primary);
+}
+
+/* =========================================
+   4. HERO SECTION (1st Section)
+   ========================================= */
+main section:nth-child(1) {
+    /* Fix: Use correct path and put gradient ON TOP (first) */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('CSS Advanced/images/Object.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 250px;
+    padding-bottom: 120px;
+    text-align: center;
+    color: var(--color-white);
+}
+
+main section:nth-child(1) h1 {
+    font-family: var(--font-display);
+    font-size: 100px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+/* SMILES GRIN LAUGH */
+main section:nth-child(1)>div:first-of-type span {
+    display: inline-block;
+    margin: 0 15px;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Register Button */
+button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 18px 32px;
+    border-radius: 30px;
+    font-family: var(--font-base);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    margin-top: 40px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background-color: #b050ff;
+}
+
+/* "Learn from the pros" */
+main section:nth-child(1) h2 {
+    font-size: 32px;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    font-weight: 300;
+}
+
+/* If HTML allows, we would color 'Learn' purple here, but HTML structure is flat h2 */
+/* main section:nth-child(1) h2 span { color: var(--color-primary); } */
+
+/* Pros Grid */
+main section:nth-child(1)>div:nth-child(2)>div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+main section:nth-child(1)>div:nth-child(2)>div>div {
+    width: 180px;
+    text-align: center;
+}
+
+main section:nth-child(1)>div:nth-child(2) img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 15px;
+}
+
+main section:nth-child(1)>div:nth-child(2) h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+main section:nth-child(1)>div:nth-child(2) p {
+    font-size: 14px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* =========================================
+   5. QUOTE / TESTIMONIAL SECTION
+   ========================================= */
+
+/* 1. Main Container */
+main section:nth-child(2) {
+    background-color: #C271FF;
+    /* Smile School Purple */
+    color: white;
+    /* White text */
+    padding: 80px 0;
+    /* Vertical spacing */
+    font-family: 'Source Sans Pro', sans-serif;
+
+    /* Layout: Flexbox to center and align Image + Text */
+    display: flex;
+    justify-content: center;
+    /* Centers content horizontally */
+    align-items: center;
+    /* Vertically centers image with text */
+    gap: 60px;
+    /* Space between image and text */
+}
+
+/* 2. Profile Image Container (First Div) */
+main section:nth-child(2)>div:first-child {
+    flex-shrink: 0;
+    /* Prevents image from shrinking if screen gets small */
+    /* Override global width */
+    width: auto;
+    margin: 0;
+}
+
+/* 3. The Profile Image */
+main section:nth-child(2) img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    /* Makes the image a perfect circle */
+    object-fit: cover;
+    /* Ensures image fills the circle without stretching */
+}
+
+/* 4. Text Container (Second Div) */
+main section:nth-child(2)>div:last-child {
+    max-width: 650px;
+    /* Limits width so text doesn't stretch too far */
+    width: auto;
+    margin: 0;
+}
+
+/* 5. The Quote Text */
+main section:nth-child(2) blockquote {
+    font-size: 22px;
+    font-weight: 400;
+    /* Regular weight */
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+    /* Resets default margin and adds bottom space */
+}
+
+/* 6. Name */
+main section:nth-child(2) h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+    /* Assuming the design uses uppercase for NAME */
+}
+
+/* 7. Profession / Title */
+main section:nth-child(2) p {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    /* Matches the "weather presenter" style */
+    margin: 0;
+}
+
+/* OPTIONAL: Mobile Responsiveness */
+@media (max-width: 768px) {
+    main section:nth-child(2) {
+        flex-direction: column;
+        /* Stack image on top of text */
+        text-align: center;
+        padding: 50px 20px;
+    }
+}
+
+/* =========================================
+   6. MOST POPULAR TUTORIALS SECTION (FIXED)
+   ========================================= */
+
+/* 1. Main Section Container */
+main section:nth-child(3) {
+    background-color: #F7F7F7;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 80px 0;
+
+    /* --- GRID LAYOUT FIX --- */
+    display: grid;
+    /* This creates exactly 4 columns, each 255px wide */
+    grid-template-columns: repeat(4, 255px);
+    /* Centers the whole grid on the screen */
+    justify-content: center;
+    /* Spacing between columns and rows */
+    gap: 30px;
+
+    width: 100%;
+    margin: 0 auto;
+    color: #071629;
+}
+
+/* 2. Section Heading */
+main section:nth-child(3) h2 {
+    /* Forces the title to span across all 4 columns */
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 300;
+    color: #071629;
+    margin-bottom: 50px;
+}
+
+/* 3. The Card Container (The 4 divs) */
+main section:nth-child(3)>div {
+    background: white;
+    /* No width needed here, the grid controls the 255px width */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+
+    /* Position Relative is for the absolute stars/time at the bottom */
+    position: relative;
+    padding-bottom: 60px;
+    transition: transform 0.3s;
+}
+
+main section:nth-child(3)>div:hover {
+    transform: translateY(-5px);
+}
+
+/* 4. Card Content Styling */
+main section:nth-child(3)>div>img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+/* IMAGE FIXES (Re-inserted) */
+main section:nth-child(3)>div:nth-of-type(1)>img {
+    content: url('CSS Advanced/images/7.png');
+}
+
+main section:nth-child(3)>div:nth-of-type(2)>img {
+    content: url('CSS Advanced/images/8.png');
+}
+
+main section:nth-child(3)>div:nth-of-type(3)>img {
+    content: url('CSS Advanced/images/9.png');
+}
+
+main section:nth-child(3)>div:nth-of-type(4)>img {
+    content: url('CSS Advanced/images/6.png');
+}
+
+/* Play Overlay (Re-inserted) */
+main section:nth-child(3)>div::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background-image: url('CSS Advanced/images/play.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    z-index: 1;
+}
+
+main section:nth-child(3)>div h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #071629;
+    margin: 15px 20px 10px;
+}
+
+main section:nth-child(3)>div>p:first-of-type {
+    font-size: 13px;
+    color: #888;
+    line-height: 1.4;
+    margin: 0 20px 20px;
+}
+
+/* 5. Author Block */
+main section:nth-child(3)>div>div:first-of-type {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+main section:nth-child(3)>div>div:first-of-type img {
+    content: url('CSS Advanced/images/1.png');
+    /* Re-inserted fix */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+main section:nth-child(3)>div h4 {
+    font-size: 14px;
+    color: #C271FF;
+    margin: 0;
+}
+
+/* 6. Card Footer (Stars & Time) */
+main section:nth-child(3)>div>div:last-of-type {
+    display: flex;
+    gap: 2px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 0;
+}
+
+main section:nth-child(3)>div .fa-star {
+    color: #C271FF;
+    font-size: 13px;
+}
+
+main section:nth-child(3)>div>p:last-child {
+    font-size: 12px;
+    font-weight: 600;
+    color: #C271FF;
+    margin: 0;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 0;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 1150px) {
+    main section:nth-child(3) {
+        grid-template-columns: repeat(2, 255px);
+        /* 2 columns on tablet */
+    }
+}
+
+@media (max-width: 600px) {
+    main section:nth-child(3) {
+        grid-template-columns: repeat(1, 255px);
+        /* 1 column on phone */
+    }
+}
+
+/* =========================================
+   7. FREE MEMBERSHIP SECTION
+   ========================================= */
+
+main section:nth-child(4) {
+    background-color: #071629;
+    /* Dark Navy Background */
+    color: white;
+    padding: 100px 0;
+
+    /* --- GRID LAYOUT ENGINE --- */
+    display: grid;
+    /* Create 4 columns, sized to fit their content */
+    grid-template-columns: repeat(4, 250px);
+    /* Center the grid in the middle of the screen */
+    justify-content: center;
+    /* Space between the items */
+    gap: 30px;
+    align-items: start;
+}
+
+/* --- 1. TITLE (Spans across top) --- */
+main section:nth-child(4) h2 {
+    /* Tell the title to span from column line 1 to the end (-1) */
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+/* If you want the purple "Free" text, uncomment this:
+main section:nth-child(4) h2 span { color: #C271FF; font-weight: 700; } */
+
+
+/* --- 2. THE 4 COLUMNS (The Grid Items) --- */
+main section:nth-child(4)>div {
+    text-align: center;
+    /* No width needed here, the grid controls it */
+}
+
+main section:nth-child(4)>div img {
+    width: 45px;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+main section:nth-child(4)>div h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+main section:nth-child(4)>div p {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+
+/* --- 3. BUTTON (Spans across bottom) --- */
+main section:nth-child(4) button {
+    /* Tell the button to span all columns like the title */
+    grid-column: 1 / -1;
+    /* Center the button itself within that span */
+    justify-self: center;
+
+    background-color: #C271FF;
+    color: white;
+    border: none;
+    padding: 18px 32px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    margin-top: 40px;
+    transition: 0.3s;
+}
+
+main section:nth-child(4) button:hover {
+    background-color: #b05ceb;
+}
+
+/* =========================================
+   8. FAQ SECTION (5th Section)
+   ========================================= */
+main section:nth-child(5) {
+    padding: 80px 0;
+    text-align: center;
+    color: var(--color-dark);
+}
+
+main section:nth-child(5) h2 {
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 60px;
+}
+
+main section:nth-child(5)>div {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+main section:nth-child(5)>div>div {
+    flex: 1;
+    min-width: 300px;
+}
+
+main section:nth-child(5) h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+main section:nth-child(5)>div>div>div:nth-child(even) {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* =========================================
+   9. FOOTER
+   ========================================= */
+footer {
+    background-color: var(--color-dark);
+    padding: 60px 0 30px;
+    color: var(--color-white);
+}
+
+footer section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer section>div:first-child {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+footer img {
+    width: 140px;
+}
+
+footer section>div:first-child>div {
+    display: flex;
+    gap: 20px;
+}
+
+footer i {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+footer i:hover {
+    color: var(--color-primary);
+}
+
+footer p {
+    opacity: 0.5;
+    font-size: 12px;
+}
