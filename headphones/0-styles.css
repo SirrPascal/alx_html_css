@@ -1,0 +1,233 @@
+:root {
+    --color-primary: #FF6565;
+    --color-text: #FFFFFF;
+    --font-family: 'Source Sans Pro', sans-serif;
+    --max-width: 1000px;
+    --header-padding: 2rem 0;
+}
+
+/* Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--color-text);
+    /* For the hero section background, we apply it to body or html usually if it covers full page initially, 
+       but here it's specfic to the hero section, so we might want a dark default background */
+    background-color: #000; 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Utilities */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 101, 101, 0.4);
+}
+
+.btn:hover,
+.btn:active {
+    opacity: 0.9;
+}
+
+/* Header */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: var(--header-padding);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 30px; /* Adjust based on actual image ratio if needed */
+    width: auto;
+}
+
+.nav-list {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-text);
+}
+
+.nav-link:hover,
+.nav-link:active {
+    color: var(--color-primary);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-text);
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('images/headphones_hero_1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Or adjust to a specific height preference, typically 600-800px or 100vh for hero */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Overlay to darken background if needed - assuming image is already dark or needs it */
+/*
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4); 
+}
+*/
+
+.hero-container {
+    z-index: 1; /* Ensure text is above overlay if added */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px; /* push down content a bit */
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+}
+
+.hero-btn {
+    margin-bottom: 4rem;
+}
+
+.hero-text {
+    max-width: 700px;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 auto;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .header-container {
+        /* Keep logo center for mobile as per prompt? prompt says: switch to mobile version width 480px or less ... center Logo ? The prompt says "center the Logo". */
+        /* Actually commonly: Logo left/center, hamburger right/left. 
+           Let's look at the screenshot. 
+           Mobile screenshot: Hamburger Left, Logo Center.
+        */
+        justify-content: center; /* This centers the flex items, but we need specific positioning */
+        position: relative;
+    }
+
+    .logo {
+        /* Center the logo */
+        margin: 0 auto; 
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .nav {
+        display: none; /* Hide nav by default on mobile */
+        /* If we wanted a dropdown, we'd use the checkbox hack or JS. 
+           For this task "create the header/hero piece", simple hiding might be enough or just stacking.
+           But usually "switch to mobile version" implies a menu.
+           I'll stick to just hiding the desktop nav links for now as per typical "hamburger" pattern where it opens a drawer (not fully implemented in CSS-only without more hacks).
+           Wait, looking at the mockups (if I could see them clearly), usually there's a mobile menu.
+           I will implement a simple CSS toggle for the menu for completeness.
+        */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0,0,0,0.9);
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* Show nav when checkbox checked */
+    #menu-toggle:checked ~ .nav {
+        display: block;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-text {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+}
