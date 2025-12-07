@@ -1,44 +1,52 @@
 # SmileSchool
 
 ## Overview
-SmileSchool is a modern, responsive landing page for an online school dedicated to teaching the art of smiling. The project demonstrates advanced CSS techniques including Flexbox, CSS Grid, custom font integration, and responsive design principles.
+**SmileSchool** is a modern, responsive landing page for an online platform dedicated to teaching the art of smiling. The project showcases advanced CSS techniques such as **Flexbox**, **CSS Grid**, **custom font integration**, and **fully responsive design principles**.
 
-## Visual Illustrations (Parts 1-6)
+---
+
+## Visual Illustrations (Parts 1–6)
 
 ### Part 1: Hero Section
-The landing page features a bold hero section with a gradient overlay and a clear call to action.
+A bold hero banner with a gradient overlay, custom typography, and a clear call to action.  
 ![Part 1: Hero Section](CSS%20Advanced/images/part-1.png)
 
 ### Part 2: Quote / Testimonial Section
-A focused testimonial section with a centered profile image, quote, and responsive layout.
+A focused testimonial block featuring a centered profile image, styled quote, and responsive alignment.  
 ![Part 2: Quote Section](CSS%20Advanced/images/part-2.png)
 
 ### Part 3: Most Popular Tutorials
-A dynamic grid layout showcasing the most popular tutorials with hover effects and play button overlays.
+A dynamic tutorials grid with hover effects, video thumbnails, and play-button overlays.  
 ![Part 3: Tutorials Section](CSS%20Advanced/images/part-3.png)
 
 ### Part 4: Free Membership
-A clean, 4-column grid layout for the membership benefits section, ensuring perfect horizontal alignment.
+A clean four-column layout presenting membership benefits with evenly spaced icons and text.  
 ![Part 4: Membership Section](CSS%20Advanced/images/part-4.png)
 
 ### Part 5: FAQ Section
-A clean FAQ section listing common questions in a two-column layout.
+A simple and readable FAQ section laid out in two responsive columns for better usability.  
 ![Part 5: FAQ Section](CSS%20Advanced/images/part-5.png)
 
 ### Part 6: Footer
-A comprehensive footer with social icons and copyright information.
+A full-width footer featuring the SmileSchool logo, social media icons, and copyright details.  
 ![Part 6: Footer](CSS%20Advanced/images/part-6.png)
 
+---
+
 ## Features
-- **Responsive Design**: Adapts seamlessly to different screen sizes.
-- **CSS Grid & Flexbox**: Utilizes modern layout engines for precise positioning.
-- **Custom Typography**: Integrates Google Fonts (Source Sans Pro, Coiny).
-- **Interactive Elements**: Hover states for buttons, cards, and links.
+- **Responsive Design:** Optimized layouts for desktop, tablet, and mobile screens.  
+- **CSS Grid & Flexbox:** Modern layout systems for precise and flexible positioning.  
+- **Custom Typography:** Includes Google Fonts (*Source Sans Pro* and *Coiny*).  
+- **Interactive Elements:** Button hover states, card animations, and link transitions.  
+
+---
 
 ## Technologies Used
-- HTML5
-- CSS3
-- FontAwesome
+- **HTML5**  
+- **CSS3**  
+- **FontAwesome Icons**
+
+---
 
 ## License
-This project is for educational purposes as part of the ALX Software Engineering curriculum.
+This project is created for educational purposes as part of the **ALX Software Engineering Curriculum**.
